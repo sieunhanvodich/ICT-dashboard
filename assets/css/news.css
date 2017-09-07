@@ -1,0 +1,50 @@
+/* main-content-style */
+.main-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #00b300;
+}
+
+.main-content.page-2{
+    height: 910px;
+}
+
+/* post style */
+.content .main-content .post {
+    display: table;
+    height: auto;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.main-content .post:first-child {
+    margin-top: 30px;
+}
+
+.main-content img {
+    height: 150px;
+    border: 1px solid blue;
+}
+
+.main-content #post-date {
+    margin: 10px 0 10px 30px;
+}
+
+.content a:link{
+    color: #015601;
+}
+
+.content .newer-post {
+    margin-top: 15px;
+    margin-right: 15px;
+    float: right;
+}
+
+.content .newer-post a:link{
+   color: red;
+}
+/* post-content */
+.post .post-content .post-short-content p{
+    line-height: 1.42857143;
+    font-size: 14px;
+}

@@ -1,0 +1,52 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default" style="margin-top:30px;">
+				<div class="panel-heading">
+					<h1 class="panel-title" style="font-size:2em;">Register</h1>
+				</div>
+				<?php if (validation_errors()) : ?>
+					<div class="alert alert-danger" role="alert">
+						<?= validation_errors() ?>
+					</div>
+				<?php endif; ?>
+				<?php if (isset($error)) : ?>
+					<div class="alert alert-danger" role="alert">
+						<?= $error ?>
+					</div>
+				<?php endif; ?>
+				<?php echo $this->session->flashdata('msg'); ?>
+				<?= form_open() ?>
+					<div class="panel-body">
+						<div class="register_form" style="">
+							<div class="form-group">
+								<label for="username">Username</label>
+								<input type="text" class="form-control" id="username" name="username" placeholder="Enter a username">
+								<p class="help-block">At least 4 characters, letters or numbers only</p>
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+								<p class="help-block">A valid email address</p>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Enter a password">
+								<p class="help-block">At least 6 characters</p>
+							</div>
+							<div class="form-group">
+								<label for="password_confirm">Confirm password</label>
+								<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm your password">
+								<p class="help-block">Must match your password</p>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-default" value="Register">
+							</div>
+							<?php echo form_close(); ?>
+						</div>
+					</div>
+				</form>
+		</div>
+	</div><!-- .row -->
+</div><!-- .container -->
